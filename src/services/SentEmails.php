@@ -63,10 +63,10 @@ class SentEmails extends Component
         $infoTable = $variables[SentEmails::SENT_EMAIL_MESSAGE_VARIABLE] ?? null;
 
         // Populate what we can for the Info Table for System Messages
-        if (isset($message->mailer) && get_class($message->mailer) === CraftMailer::class) {
+        // if (isset($message->mailer) && get_class($message->mailer) === CraftMailer::class) {
             $infoTable = new SentEmailInfoTable();
             $infoTable = $this->updateInfoTableWithCraftInfo($message, $infoTable);
-        }
+        // }
 
         // Sender Info
         $infoTable->senderName = $fromName;
